@@ -1,0 +1,11 @@
+# Static site — no build step. The app is a single index.html that loads
+# React + Babel from CDN and runs entirely in the browser.
+[build]
+  publish = "."
+  command = ""
+
+# Long-cache nothing aggressively; index.html should always be fresh.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
